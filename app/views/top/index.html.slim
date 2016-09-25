@@ -1,0 +1,21 @@
+section.section
+  div.container
+    h1.title トップページ
+    div.columns.is-multiline.is-mobile
+      - @articles.each do |article|
+        div.column.is-full-mobile.is-half-tablet.is-one-third-desktop
+          div.card.is-fullwidth.is-rounded
+            div.card-image
+              figure.image.is-4by3
+                a href = article.link
+                  img src = article.image_path alt = article.title
+            div.card-content
+              div.media
+                div.media-content
+                  p.title.is-5 = article.title
+              div.content
+                p ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                small 11:09 PM - 1 Jan 2016
+                br
+                small 
+                  a href="http://yahoo.co.jp" 掲載元
