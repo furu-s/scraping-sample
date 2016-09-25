@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.title {
+  line-height: 1.4;
+}

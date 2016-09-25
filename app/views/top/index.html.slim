@@ -1,21 +1,46 @@
+section.hero.is-primary.is-medium.is-bold
+  header.nav
+    div.container
+      div.nav-left
+        /nav-item
+          img src="images/bulma-type-white.png" alt="Logo"
+      span.nav-toggle
+        span
+        span
+        span
+      div.nav-right.nav-menu
+        a.nav-item.is-active Home
+        a.nav-item Examples
+        a.nav-item Documentation
+        span.nav-item
+          a.button.is-primary.is-inverted
+            span.icon
+              i.fa.fa-github
+            span Download
+
+  div.hero-body
+    div.container
+      h1.title Practice of Scraping
+      h2.subtitle SSC : Scraping Sample Code by using Ruby on rails
+      
 section.section
   div.container
-    h1.title トップページ
+    h1.title ハウコレ
     div.columns.is-multiline.is-mobile
       - @articles.each do |article|
         div.column.is-full-mobile.is-half-tablet.is-one-third-desktop
           div.card.is-fullwidth.is-rounded
             div.card-image
               figure.image.is-4by3
-                a href = article.link
+                a href="http://howcollect.jp#{article.link}" target="_blank"
                   img src = article.image_path alt = article.title
             div.card-content
               div.media
                 div.media-content
                   p.title.is-5 = article.title
               div.content
-                p ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                small 11:09 PM - 1 Jan 2016
+                p = article.summary
+                small = article.published_date
                 br
                 small 
-                  a href="http://yahoo.co.jp" 掲載元
+                  a href="http://howcollect.jp#{article.link}" target="_blank" 掲載元
